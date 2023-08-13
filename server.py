@@ -22,7 +22,7 @@ def sent_analyzer():
     response = sentiment_analyzer(text_to_analyze)
     label_class = response['label'].split('_')[1]
     score = response['score']
-    return "The given test has been identified as {} with a score of {}".format(label, score)
+    return "The given test has been identified as {} with a score of {}".format(label_class, score)
 
 @app.route("/")
 def render_index_page():
